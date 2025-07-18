@@ -45,12 +45,6 @@ Chatty is a modern, full-stack, real-time chat application where users can sign 
 
 ---
 
-## 📷 Screenshots
-
-> _Coming Soon!_ (You can add screenshots here later using Markdown `![Alt Text](url)`)
-
----
-
 ## 📦 Installation (Local Development)
 
 ```bash
@@ -68,6 +62,8 @@ cd ../frontend
 npm install
 npm run dev
 
+```
+
 ## 🔑 Environment Variables
 
 Create `.env` files in both `frontend/` and `backend/` directories.
@@ -81,7 +77,7 @@ JWT_SECRET=your_jwt_secret
 CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
-
+```
 
 ## 🚀 Deployment
 
