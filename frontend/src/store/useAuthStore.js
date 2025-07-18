@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 
 const BASE_URL = 'http://localhost:5001';
 
-export const useAuthStore = create((set) => ({
+export const useAuthStore = create((set, get) => ({
   authUser: null,
   isSigningUp: false,
   isLoggingIn: false,
@@ -81,8 +81,20 @@ export const useAuthStore = create((set) => ({
   connectSocket: () => {
     const { authUser } = get();
     if (!authUser || get().socket?.connect) return;
-    const socket = io(BASE_URL);
+    const socket = io(BASE_URL, {
+      query: {
+        userId: authUser._id,
+      },
+    });
     socket.connect();
+
+    set({ socket: socket });
+
+    socket.on('getOnlineUsers', (userIds) => {
+      set({ onlineUsers: userIds });
+    });
   },
-  disconnectSocket: () => {},
+  disconnectSocket: () => {
+    if (get().socket?.connected) get().socket.disconnect();
+  },
 }));

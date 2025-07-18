@@ -15,7 +15,7 @@ import { Loader } from 'lucide-react';
 import { useThemeStore } from './store/useThemeStore';
 
 const App = () => {
-  const { authUser, checkAuth, isChekingAuth } = useAuthStore();
+  const { authUser, checkAuth, isChekingAuth, onlineUsers } = useAuthStore();
   const { theme } = useThemeStore();
 
   useEffect(() => {
