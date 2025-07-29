@@ -6,7 +6,7 @@ Chatty is a modern, full-stack, real-time chat application where users can sign 
 
 ## 🚀 Live Demo
 
-👉 [Visit Chatty Live](https://chatty-iota-lime.vercel.app/signup)
+👉 [Visit Chatty Live](https://chatty-iota-lime.vercel.app/)
 
 ---
 
